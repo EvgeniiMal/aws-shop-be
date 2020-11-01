@@ -71,12 +71,14 @@ functions:
       - http:
           path: products
           method: get
+          cors: true
   getProductDetails:
     handler: handler.getProductsById
     events:
       - http:
           path: products/{productId}
           method: get
+          cors: true
           request: 
             parameters: 
               paths: 
